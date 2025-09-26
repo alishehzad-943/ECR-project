@@ -1,0 +1,48 @@
+    1  clear
+    2  yum install git -y
+    3  clear
+    4  mkdir ali
+    5  cd ali
+    6  git init
+    7  mkdir src
+    8  mkdir src/routes
+    9  vim src/index.ts
+   10  vim src/routes/router.ts
+   11  vim Dockerfile
+   12  git add .
+   13  git commit -m "code pushed"
+   14  git config --global user.name "alishehzad943"
+   15  git config --global user.email "princealishehzad943@gmail.com"
+   16  git branch -M main
+   17  git remote add origin https://github.com/alishehzad-943/ECR-project.git
+   18  git push -u origin main
+   19  clear
+   20  cd
+   21  git clone https://github.com/alishehzad-943/ECR-project.git Ali
+   22  cd Ali
+   23  ll
+   24  clear
+   25  ll
+   26  vim Dockerfile
+   27  docker build -t my-image .
+   28  yum insatll docker -y
+   29  yum install docker -y
+   30  systemctl status docker
+   31  systemctl start docker
+   32  systemctl enable docker
+   33  sudo systemctl enable docker
+   34  systemctl status docker
+   35  docker build -t my-image .
+   36  docker run -t -p 8000:8000 my-image
+   37  ll
+   38  cd Ali
+   39  docker ps -a
+   40  docker rm 1d4373cd1291
+   41  docker rm 35c3946198dd
+   42  docker rm 7282779f6985
+   43  aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 050017197699.dkr.ecr.eu-north-1.amazonaws.com
+   44  docker build -t my-image2 .
+   45  docker tag my-image2:latest 050017197699.dkr.ecr.eu-north-1.amazonaws.com/my-image2:latest
+   46  docker push 050017197699.dkr.ecr.eu-north-1.amazonaws.com/my-image2:latest
+   47  clear
+   48  history
